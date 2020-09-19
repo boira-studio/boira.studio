@@ -17,6 +17,7 @@
     "@nuxt/content": "^1.7.1",
     "@nuxtjs/axios": "5.10.1",
     "@nuxtjs/prismic": "^1.2.3",
+    "npm-upgrade": "^2.0.4",
     "nuxt": "2.12.2",
     "nuxt-i18n": "6.10.1",
     "vue-burger-menu": "^2.0.5"

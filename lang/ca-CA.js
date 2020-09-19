@@ -88,8 +88,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/nova-web-5w/hover.jpg",
-        home: "/image/projectes/nova-web-5w/thumbnail-home.jpg",
+        hover: "image/projectes/nova-web-5w/hover.jpg",
+        home: "image/projectes/nova-web-5w/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/nova-web-5w/thumbnail-home.jpg"
       },
 {
@@ -104,8 +104,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/kamaleonik/hover.jpg",
-        home: "/image/projectes/kamaleonik/thumbnail-home.jpg",
+        hover: "image/projectes/kamaleonik/hover.jpg",
+        home: "image/projectes/kamaleonik/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/kamaleonik/thumbnail-home.jpg"
       },
 
@@ -121,8 +121,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/tierra-sin-ellas/hover.jpg",
-        home: "/image/projectes/tierra-sin-ellas/thumbnail-home.jpg",
+        hover: "image/projectes/tierra-sin-ellas/hover.jpg",
+        home: "image/projectes/tierra-sin-ellas/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/tierra-sin-ellas/thumbnail-home.jpg"
       },
 {
@@ -137,8 +137,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/cidob-elecciones/hover.jpg",
-        home: "/image/projectes/cidob-elecciones/thumbnail-home.jpg",
+        hover: "image/projectes/cidob-elecciones/hover.jpg",
+        home: "image/projectes/cidob-elecciones/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/cidob-elecciones/thumbnail-home.jpg"
       },
 {
@@ -153,8 +153,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/danidevito/hover.jpg",
-        home: "/image//projectes/danidevito/thumbnail-home.jpg",
+        hover: "image/projectes/danidevito/hover.jpg",
+        home: "image//projectes/danidevito/thumbnail-home.jpg",
         detall_destacada: "/image/danidevito/thumbnail-home.jpg"
       },
 {
@@ -169,8 +169,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/jover/hover.jpg",
-        home: "/image//projectes/jover/thumbnail-home.jpg",
+        hover: "image/projectes/jover/hover.jpg",
+        home: "image//projectes/jover/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/jover/thumbnail-home.jpg"
       },
 {
@@ -185,8 +185,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/se-queda-en-casa/hover.jpg",
-        home: "/image/projectes/se-queda-en-casa/thumbnail-home.jpg",
+        hover: "image/projectes/se-queda-en-casa/hover.jpg",
+        home: "image/projectes/se-queda-en-casa/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/se-queda-en-casa/thumbnail-home.jpg"
       },
 {
@@ -201,8 +201,8 @@ export default {
         next: " ",
         image: " ",
         prev: " ",
-        hover: "/image/projectes/beh/hover.jpg",
-        home: "/image/projectes/beh/thumbnail-home.jpg",
+        hover: "image/projectes/beh/hover.jpg",
+        home: "image/projectes/beh/thumbnail-home.jpg",
         detall_destacada: "/image/projectes/beh/thumbnail-home.jpg"
       },
 ],
