@@ -1,0 +1,35 @@
+{
+  "name": "boira.studio",
+  "version": "1.0.0",
+  "description": "Cooperativa de disseny i desenvolupament digital",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@luxdamore/vue-cursor-fx": "^1.4.0",
+    "@nuxt/content": "^1.7.1",
+    "@nuxtjs/axios": "5.10.1",
+    "@nuxtjs/prismic": "^1.2.3",
+    "nuxt": "2.12.2",
+    "nuxt-i18n": "6.10.1",
+    "vue-burger-menu": "^2.0.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "2.0.2",
+    "eslint": "7.0.0",
+    "eslint-loader": "4.0.2",
+    "node-sass": "^4.14.1",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^10.0.1"
+  },
+  "engines": {
+    "node": ">=10.x"
+  }
+}

@@ -1,0 +1,85 @@
+:root {
+  --main-bg-color: coral;
+  --main-txt-color: blue;
+  --main-padding: 15px;
+  --x: 0;
+--y: 0;
+--d: 50;
+}
+
+.cursor-fx__inner{
+  z-index: 9999;
+}
+
+
+/* VARIABLE */
+$base-color: #c6538c;
+$gris: #DEDEDE;
+$amplada_maxima: 1540px;
+$contingut: 1170px;
+
+@mixin grid-col {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+@mixin seccio{
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 115%;
+  /* identical to box height, or 21px */
+  letter-spacing: -0.01em;
+  color: #454545;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+@mixin seccio_link{
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 115%;
+  /* identical to box height, or 21px */
+  letter-spacing: -0.01em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  color: #454545;
+}
+
+
+
+
+h1,h2,h3,h4,h5{
+  margin-top: 0;
+  margin-bottom:0
+}
+
+h2{
+  font-size:70px;
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 115%;
+  /* or 80px */
+  letter-spacing: -0.02em;
+  margin-bottom: .5em;
+  font-size: 4.35em;
+}
+
+
+p{
+  font-family: "HKGrotesk";
+  font-size:19px;
+  line-height: 150%;
+}
+

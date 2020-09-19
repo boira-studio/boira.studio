@@ -1,0 +1,684 @@
+@import "variables";
+
+body {
+  //font-family: "wotfard";
+  font-feature-settings: "hist" off, "salt" 01, "ss01" off, "ss02" off,
+    "ss03" off, "cv01" off, "cv02" off, "cv03" off, "swsh" 00, "cswh" 00,
+    "ornm" 00, "nalt" 00;
+  background-color: #dedede;
+  margin: 0;
+  padding: 0;
+  color: #454545;
+  font-family: "HK Grotesk";
+}
+
+p {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+/*CAPÇALERA WEB*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  > div {
+    flex-basis: 33.3%;
+    display: flex;
+
+    &.slogan {
+      display: flex;
+
+      h2 {
+        max-width: 260px;
+        font-weight: 200;
+        font-size: 21px;
+        margin: 0;
+        padding: 2em;
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 120%;
+        /* or 25px */
+        
+        
+        color: #454545;
+      }
+    }
+
+
+
+    &.burguer {
+      justify-content: flex-end;
+      z-index: 99;
+      > div {
+        padding: 52px;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        img.bar {
+          display: block;
+        }
+        img.close {
+          display: none;
+        }
+        &.active {
+          img.bar {
+            display: none;
+          }
+          img.close {
+            display: block;
+          }
+        }
+      }
+      nav.menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #232323;
+        top: 0;
+
+        > div {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+        }
+        ul {
+          margin: 0;
+          text-align: center;
+          font-size: 70px;
+          padding: 0;
+
+          li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            a {
+              font-family: "Amiri";
+              font-style: normal;
+              font-weight: bold;
+              font-size: 100px;
+              line-height: 90%;
+              letter-spacing: -0.02em;
+              color: white;
+              text-decoration: none;
+
+              &:hover {
+                -webkit-text-stroke: 1px white;
+                color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ul.lang-switcher {
+    justify-content: center;
+    margin:0;
+    padding:0;
+    flex-basis: 33.3%;
+    display: flex;
+  
+    li{
+      list-style: none;
+      a {
+        font-style: normal;
+        font-size: 18px;
+        line-height: 125%;
+        /* identical to box height, or 22px */
+        text-align: center;
+        text-decoration-line: underline;
+        color: #454545;
+        
+        
+      }
+      &:first-child{
+        &::after{
+          content: '-';
+          margin-left:5px;
+          margin-right:5px;
+
+        }
+     
+      }
+    }      
+  }
+
+  &.default {
+    h1 {
+      svg {
+        width: 200px;
+      }
+    }
+  }
+}
+
+
+
+/*INTRO WEB*/
+
+section#intro {
+  width: 100%;
+  max-width: 1440px;
+  //height: calc(100vh - 170px);
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 160px;
+
+  > div {
+    height: 900px;
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
+
+    &::before {
+      background: url(../image/bg_superior_1440.png) no-repeat;
+      max-width: 100%;
+      height: 900px;
+      bottom: -170px;
+
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      width: 1440px;
+      background-position: center;
+    }
+
+    &::after {
+      background: url(../image/bg_inferior_1440.png) no-repeat;
+      max-width: 100%;
+      height: 900px;
+      bottom: -170px;
+      content: " ";
+      position: absolute;
+      z-index: -3;
+      width: 1440px;
+      background-position: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+
+      svg {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        position: fixed;
+        z-index: -2;
+        width: 565px;
+        height: 312px;
+
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+/*
+HOMEPAGE - Estudi
+*/
+
+section.estudi {
+  position: relative;
+  z-index: 0;
+  background: #dedede;
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+
+    a {
+      grid-column: 5 / 12;
+      padding-bottom:1em;
+      @include seccio_link;
+  
+    }
+
+    h2 {
+      grid-column: 2 / 12;
+      font-size: 70px;
+      height: 113%;
+      line-height: 1.15;
+      font-weight: 500;
+      color: #454545;
+      letter-spacing: -2px;
+
+      i {
+        color: white;
+        font-style: italic;
+      }
+    }
+
+    > div {
+      grid-column: 5 / 12;
+      columns: 2;
+
+      p {
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+section.work {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 12%,
+    #222222 12%,
+    #222222 97%,
+    #fff 97%,
+    #fff 100%
+  );
+  color: #fff;
+  padding-top: 400px;
+  &::after {
+    background: url(../image/nens.png) no-repeat #dedede;
+    height: 23%;
+    position: absolute;
+    content: " ";
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    margin: 0 auto;
+  }
+
+  .projecte {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+
+    h3 {
+      grid-column: 1 / 6;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 70px;
+      line-height: 90%;
+    }
+    div {
+      grid-column: 1;
+      -ms-writing-mode: tb-rl;
+      writing-mode: tb-rl;
+      transform: -90deg;
+      transform: rotate(0.5turn);
+      display: flex;
+      width: 70px;
+      align-items: center;
+      height: 70%;
+      counter-reset: my-awesome-counter;
+
+
+      span {
+        font-size: 75px;
+        counter-increment: my-awesome-counter;
+                &::before {
+                    content: "0" counter(my-awesome-counter);
+                    font-weight: bold;
+                    margin-right: 0.5rem;
+                    font-family: 'Amiri', serif;
+                    line-height: 1;
+                    color: #454545;
+                    //visibility: hidden;
+                    display: block;
+                    font-size: 64px;
+                    float: left;
+                  }
+      }
+      p {
+        font-size: 20px;
+        max-height: 300px;
+        padding-top: 2em;
+      }
+    }
+
+    img {
+      grid-column: 2 / 12;
+    }
+  }
+}
+
+section.cooperativa {
+  background: #fff;
+  padding: 270px 0;
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto;
+
+    grid-column-gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    a {
+      grid-column: 5 / 12;
+      grid-row: 1;
+      @include seccio_link;
+    }
+    h2 {
+      grid-column: 1 / 8;
+      font-size: 70px;
+      font-family: "Amiri";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 70px;
+      line-height: 115%;
+      /* or 80px */
+
+      text-align: center;
+      letter-spacing: -0.02em;
+
+      color: #454545;
+      grid-row: 2;
+    }
+    div {
+      grid-column: 9 / 13;
+      grid-row: 1 / 2;
+    }
+  }
+}
+
+//Detall cooperativa i estudi
+
+article {
+  background-color: $gris;
+  padding-top: 110px;
+
+  &.estudi {
+    &:before {
+      background: url(../image/muntanya.png) no-repeat center bottom;
+      content: "";
+      position: absolute;
+      top: 31vh;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .intro {
+      padding-bottom: 540px;
+    }
+  }
+  &.cooperativa {
+    section.intro{
+      background: url(../image/bg_cooperativa.png) no-repeat left bottom $gris;
+      background-size: contain;
+
+    }
+    section.quisom{
+      background: url(../image/persones.jpg) no-repeat right bottom $gris;
+      background-size: contain;
+
+    }
+  }
+
+  section.intro {
+    > div {
+      @include grid-col;
+      padding-bottom: 250px;
+      span {
+        grid-column: 4 / 6;
+        @include seccio;
+      }
+  
+      h2 {
+        grid-column: 2 / 11;
+      }
+
+      div {
+        grid-column: 4 / 12;
+        columns: 2;
+      }
+    }
+
+  }
+  section.quisom {
+    margin-bottom:240px;
+    > div {
+      @include grid-col;
+      padding-bottom: 250px;
+  
+      h2 {
+        grid-column: 3 / 7;
+        font-size: 126px;
+      }
+      div {
+        &.quim {
+          grid-column: 2 / 7;
+        }
+        &.miquel {
+          grid-column: 8 / 13;
+        }
+        h4 {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 19px;
+          line-height: 150%;
+          color: #454545;
+          margin: 1em -80px;
+        }
+        h3 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 100%;
+          /* or 36px */
+  
+          letter-spacing: -0.01em;
+          max-width: 200px;
+          color: #454545;
+        }
+      }
+    }
+
+  }
+  section.serveis {
+    position: relative;
+    display: grid;
+    max-width: 1024px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 30px;
+    grid-template-areas:
+      "titol brand"
+      "producte ."
+      ". digital";
+    margin-bottom: 540px;
+    background: url(../image/svg/elipse.svg) no-repeat center center;
+
+    h1 {
+      grid-area: titol;
+      font-size: 128px;
+      padding-left: 160px;
+      font-family: "Amiri";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 126px;
+      line-height: 80%;
+      /* or 101px */
+
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      color: #454545;
+
+      hyphens: auto;
+    }
+    .branding {
+      grid-area: brand;
+    }
+    .product {
+      grid-area: producte;
+    }
+    .digital {
+      grid-area: digital;
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 100%;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 19px;
+      line-height: 150%;
+      /* or 28px */
+
+      color: #353535;
+    }
+    img {
+      float: left;
+    }
+  }
+}
+
+
+
+
+footer {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background: linear-gradient(180deg, transparent 414px, #222222 414px);
+
+  &.blanc {
+    figure {
+      background: #fff;
+    }
+  }
+
+  &.negre{
+    figure {visibility: hidden;}
+
+  }
+  figure {
+    width: 100%;
+    margin: 0;
+    height: 416px;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  > main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+
+    span {
+      grid-column: 5 / 12;
+      @include seccio;
+      color:white;
+    }
+
+    h2 {
+      grid-column: 2 / 12;
+      font-size: 70px;
+      height: 113%;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -2px;
+
+      i {
+        color: white;
+        font-style: italic;
+      }
+    }
+
+    > div {
+      grid-column: 5 / 12;
+      columns: 1;
+
+      p {
+        font-size: 19px;
+      }
+      div.contacta {
+        background: url("../image/svg/telefon.svg") no-repeat left center;
+        height: auto;
+        overflow: hidden;
+        margin-top:15px;
+
+        
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-start;
+          float: left;
+          padding-left: 50px;
+          li {
+            list-style: none;
+            flex-basis: 35%;
+            line-height: 2em;
+            padding-left: 25px;
+            background: url("../image/svg/arrow.svg") no-repeat left center;
+
+            a{
+              color:white;
+              font-weight:600;
+            
+            }
+          }
+        }
+        //background-image: url();
+      }
+    }
+  }
+
+  .copyright{
+    text-align:center;
+    font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 125%;
+/* identical to box height, or 22px */
+
+text-align: center;
+
+color: #FFFFFF;
+padding-top:225px;
+padding-bottom: 70px;
+  }
+}

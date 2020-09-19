@@ -1,0 +1,103 @@
+@import "variables";
+
+
+.projectes {
+    background: #222222;
+    color:#fff;
+
+    .treballs{
+        max-width: 1024px;
+        margin:0 auto;
+        width: 100%;
+        @include grid-col;
+
+        ul{
+            margin:0;
+            padding:0;
+            grid-column: 4 / 12;
+            list-style: none;
+            counter-reset: my-awesome-counter;
+
+            li{
+                position: relative;
+                counter-increment: my-awesome-counter;
+                padding-bottom: 30px;
+                &::before {
+                    content: "0" counter(my-awesome-counter)".";
+                    font-weight: bold;
+                    margin-right: 0.5rem;
+                    font-family: 'Amiri', serif;
+                    line-height: 1;
+                    color: #454545;
+                    display: block;
+                    font-size: 64px;
+                    float: left;
+                    position: relative;
+                    z-index: 1;
+                  }
+                  
+
+                  a{
+                      position: relative;
+                      color: white;
+                      text-decoration: none;
+
+
+                      hgroup{
+                          z-index: 2;
+                          position: relative;
+                        h2{
+                            font-weight: bold;
+                            font-size: 126px;
+                            line-height: 80%;
+                            /* or 101px */
+                            font-family: "HK Grotesk";
+                            letter-spacing: -0.02em;
+                        }
+                        h5{
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 20px;
+                            line-height: 130%;
+                            max-width: 450px;
+                            margin-bottom: 25px;
+                        }
+                      }
+                      img{
+                          position: absolute;
+                          top: -200px;
+                          left: -400px;
+                          visibility: hidden;
+                 
+                      }
+                    &:hover{
+                        h2{
+                            text-decoration: underline;
+                        }
+                    }
+                 
+                  }
+
+                
+                &:hover{
+    
+                    img{
+                        visibility: visible;
+                        -webkit-animation: swing 1s ease;
+                        animation: swing 1s ease;
+                        -webkit-animation-iteration-count: 1;
+                        animation-iteration-count: 1;
+                    }
+                }
+            }
+        }
+
+    }
+
+    footer{
+        figure{
+            background: #222222;
+
+        }
+    }
+}
