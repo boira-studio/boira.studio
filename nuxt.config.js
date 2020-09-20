@@ -6,6 +6,17 @@ export default {
   router: {
     base: '/boira.studio/',
   },
+
+   /* Layout Transitions */
+   layoutTransition: {
+    name: "layout",
+    mode: ""
+  },
+  /* Page Transitions */
+  pageTransition: {
+    name: "layout",
+    mode: ""
+  },
   /*
    ** Headers of the page
    */

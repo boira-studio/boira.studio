@@ -9,6 +9,14 @@ body {
   padding: 0;
   color: #454545;
   font-family: "HK Grotesk";
+  overflow-x: hidden;
+
+  @media #{$mobile} {
+  //background-color: red;
+  }
+
+
+
 }
 
 p {
@@ -34,7 +42,6 @@ header {
       h2 {
         max-width: 260px;
         font-weight: 200;
-        font-size: 21px;
         margin: 0;
         padding: 2em;
         font-family: 'HK Grotesk';
@@ -99,7 +106,6 @@ header {
         ul {
           margin: 0;
           text-align: center;
-          font-size: 70px;
           padding: 0;
 
           li {
@@ -258,6 +264,7 @@ section.estudi {
     @include grid-col;
     margin: 0 auto;
     position: relative;
+    
 
     a {
       grid-column: 5 / 12;
@@ -268,12 +275,7 @@ section.estudi {
 
     h2 {
       grid-column: 2 / 12;
-      font-size: 70px;
-      height: 113%;
-      line-height: 1.15;
-      font-weight: 500;
-      color: #454545;
-      letter-spacing: -2px;
+
 
       i {
         color: white;
@@ -398,18 +400,12 @@ section.cooperativa {
 
     h2 {
       grid-column: 1 / 8;
-      font-size: 70px;
-      font-family: "Amiri";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 70px;
-      line-height: 115%;
+
       /* or 80px */
 
       text-align: center;
-      letter-spacing: -0.02em;
+      
 
-      color: #454545;
       grid-row: 2;
     }
 
@@ -544,7 +540,6 @@ article {
 
     h1 {
       grid-area: titol;
-      font-size: 128px;
       padding-left: 160px;
       font-family: "Amiri";
       font-style: normal;
@@ -605,6 +600,8 @@ footer {
   color: #fff;
   background: linear-gradient(180deg, transparent 414px, #222222 414px);
 
+
+
   &.blanc {
     figure {
       background: #fff;
@@ -639,6 +636,12 @@ footer {
     margin: 0 auto;
     position: relative;
 
+    @media #{$mobile} {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+    }
+
     span {
       grid-column: 5 / 12;
       @include seccio;
@@ -647,11 +650,7 @@ footer {
 
     h2 {
       grid-column: 2 / 12;
-      font-size: 70px;
-      height: 113%;
-      line-height: 1.15;
-      font-weight: 500;
-      letter-spacing: -2px;
+
 
       i {
         color: white;

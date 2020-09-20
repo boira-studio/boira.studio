@@ -1,11 +1,5 @@
-:root {
-  --main-bg-color: coral;
-  --main-txt-color: blue;
-  --main-padding: 15px;
-  --x: 0;
---y: 0;
---d: 50;
-}
+$mobile: "only screen and (max-width: 767px)";
+$tablet: "only screen and (min-width: 768px) and (max-width: 1024px)";
 
 .cursor-fx__inner{
   z-index: 9999;
@@ -26,6 +20,13 @@ $contingut: 1170px;
   padding: 0 30px;
   margin: 0 auto;
   position: relative;
+
+  @media #{$mobile} {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+
 }
 
 @mixin seccio{
@@ -39,6 +40,8 @@ $contingut: 1170px;
   color: #454545;
   text-transform: uppercase;
   margin-bottom: 1em;
+
+  
 }
 
 @mixin seccio_link{
@@ -64,16 +67,22 @@ h1,h2,h3,h4,h5{
 }
 
 h2{
-  font-size:70px;
   font-family: 'Amiri';
   font-style: normal;
   font-weight: normal;
-  font-size: 70px;
   line-height: 115%;
   /* or 80px */
   letter-spacing: -0.02em;
   margin-bottom: .5em;
   font-size: 4.35em;
+
+  @media #{$mobile} {
+    font-size: 32px;
+  }
+
+
+
+
 }
 
 
@@ -83,3 +92,19 @@ p{
   line-height: 150%;
 }
 
+
+
+/*MEDIA QUERYS*/
+
+/* MIXINS */
+
+
+
+/*
+
+@media #{$tablet} {
+        margin-bottom: 50px;
+      }
+
+
+*/
