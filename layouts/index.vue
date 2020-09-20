@@ -1,7 +1,7 @@
 <template>
 
   <div>
-      <cursor-fx  color="green" colorHover="red" force-custom-slot outside-size=30 inside-size="80"	/>
+      <cursor-fx  color="gray" colorHover="black" force-custom-slot outside-size=30 inside-size="80"	/>
 
   <HeaderHome />
     <nuxt />

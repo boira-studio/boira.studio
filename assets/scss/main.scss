@@ -1,10 +1,9 @@
 @import "variables";
 
 body {
-  //font-family: "wotfard";
-  font-feature-settings: "hist" off, "salt" 01, "ss01" off, "ss02" off,
-    "ss03" off, "cv01" off, "cv02" off, "cv03" off, "swsh" 00, "cswh" 00,
-    "ornm" 00, "nalt" 00;
+  font-feature-settings: "hist"off, "salt"01, "ss01"off, "ss02"off,
+    "ss03"off, "cv01"off, "cv02"off, "cv03"off, "swsh"00, "cswh"00,
+    "ornm"00, "nalt"00;
   background-color: #dedede;
   margin: 0;
   padding: 0;
@@ -25,7 +24,7 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
 
-  > div {
+  >div {
     flex-basis: 33.3%;
     display: flex;
 
@@ -44,8 +43,8 @@ header {
         font-size: 21px;
         line-height: 120%;
         /* or 25px */
-        
-        
+
+
         color: #454545;
       }
     }
@@ -55,26 +54,32 @@ header {
     &.burguer {
       justify-content: flex-end;
       z-index: 99;
-      > div {
+
+      >div {
         padding: 52px;
         position: fixed;
         top: 0;
         z-index: 10;
+
         img.bar {
           display: block;
         }
+
         img.close {
           display: none;
         }
+
         &.active {
           img.bar {
             display: none;
           }
+
           img.close {
             display: block;
           }
         }
       }
+
       nav.menu {
         position: fixed;
         width: 100%;
@@ -82,7 +87,7 @@ header {
         background: #232323;
         top: 0;
 
-        > div {
+        >div {
           position: relative;
           display: flex;
           align-items: center;
@@ -90,6 +95,7 @@ header {
           height: 100%;
           width: 100%;
         }
+
         ul {
           margin: 0;
           text-align: center;
@@ -102,6 +108,7 @@ header {
             margin: 0;
             display: flex;
             justify-content: center;
+
             a {
               font-family: "Amiri";
               font-style: normal;
@@ -122,15 +129,17 @@ header {
       }
     }
   }
+
   ul.lang-switcher {
     justify-content: center;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     flex-basis: 33.3%;
     display: flex;
-  
-    li{
+
+    li {
       list-style: none;
+
       a {
         font-style: normal;
         font-size: 18px;
@@ -139,19 +148,20 @@ header {
         text-align: center;
         text-decoration-line: underline;
         color: #454545;
-        
-        
+
+
       }
-      &:first-child{
-        &::after{
+
+      &:first-child {
+        &::after {
           content: '-';
-          margin-left:5px;
-          margin-right:5px;
+          margin-left: 5px;
+          margin-right: 5px;
 
         }
-     
+
       }
-    }      
+    }
   }
 
   &.default {
@@ -180,7 +190,7 @@ section#intro {
   align-items: center;
   padding-bottom: 160px;
 
-  > div {
+  >div {
     height: 900px;
     max-width: 1440px;
     width: 100%;
@@ -244,19 +254,16 @@ section.estudi {
   z-index: 0;
   background: #dedede;
 
-  > div {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 30px;
-    max-width: 1024px;
+  >div {
+    @include grid-col;
     margin: 0 auto;
     position: relative;
 
     a {
       grid-column: 5 / 12;
-      padding-bottom:1em;
+      padding-bottom: 1em;
       @include seccio_link;
-  
+
     }
 
     h2 {
@@ -274,7 +281,7 @@ section.estudi {
       }
     }
 
-    > div {
+    >div {
       grid-column: 5 / 12;
       columns: 2;
 
@@ -287,20 +294,16 @@ section.estudi {
 
 section.work {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    transparent 12%,
-    #222222 12%,
-    #222222 97%,
-    #fff 97%,
-    #fff 100%
-  );
+
+  background: linear-gradient(0, #fff 0px, #fff 420px, #222222 421px);
+
+  //background:#222222;
   color: #fff;
-  padding-top: 400px;
+  padding-top: 250px;
+
   &::after {
     background: url(../image/nens.png) no-repeat #dedede;
-    height: 23%;
+    height: 680px;
     position: absolute;
     content: " ";
     top: 0;
@@ -309,15 +312,27 @@ section.work {
     margin: 0 auto;
   }
 
-  .projecte {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 30px;
-    max-width: 1024px;
-    margin: 0 auto;
+  nav {
+    @include grid-col;
     position: relative;
     z-index: 1;
-    padding: 100px 0;
+    padding-top: 100px;
+    text-decoration: none;
+    color: white;
+
+    a {
+      grid-column: 5 / 12;
+      padding-bottom: 1em;
+      @include seccio_link;
+    }
+  }
+
+  .projecte a {
+    @include grid-col;
+    z-index: 1;
+    padding-bottom: 200px;
+    text-decoration: none;
+    color: white;
 
     h3 {
       grid-column: 1 / 6;
@@ -325,7 +340,10 @@ section.work {
       font-weight: bold;
       font-size: 70px;
       line-height: 90%;
+      margin-bottom: 70px;
+
     }
+
     div {
       grid-column: 1;
       -ms-writing-mode: tb-rl;
@@ -336,25 +354,10 @@ section.work {
       width: 70px;
       align-items: center;
       height: 70%;
-      counter-reset: my-awesome-counter;
 
 
-      span {
-        font-size: 75px;
-        counter-increment: my-awesome-counter;
-                &::before {
-                    content: "0" counter(my-awesome-counter);
-                    font-weight: bold;
-                    margin-right: 0.5rem;
-                    font-family: 'Amiri', serif;
-                    line-height: 1;
-                    color: #454545;
-                    //visibility: hidden;
-                    display: block;
-                    font-size: 64px;
-                    float: left;
-                  }
-      }
+
+
       p {
         font-size: 20px;
         max-height: 300px;
@@ -363,29 +366,36 @@ section.work {
     }
 
     img {
-      grid-column: 2 / 12;
+      grid-column: 2 / 13;
+      filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
+      border-radius: 5px 5px 0 0;
+      width: 100%;
     }
+  }
+  footer {
+    @include grid-col;
+    margin-top: -241px;
+    text-decoration: none;
+    color: white;
+    border: transparent;
+    padding-bottom: 330px;
   }
 }
 
 section.cooperativa {
   background: #fff;
-  padding: 270px 0;
+  padding-bottom: 270px;
 
   main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    @include grid-col;
     grid-template-rows: 40px auto;
 
-    grid-column-gap: 30px;
-    max-width: 1024px;
-    margin: 0 auto;
-    position: relative;
     a {
       grid-column: 5 / 12;
       grid-row: 1;
       @include seccio_link;
     }
+
     h2 {
       grid-column: 1 / 8;
       font-size: 70px;
@@ -402,11 +412,14 @@ section.cooperativa {
       color: #454545;
       grid-row: 2;
     }
+
     div {
       grid-column: 9 / 13;
       grid-row: 1 / 2;
     }
   }
+
+
 }
 
 //Detall cooperativa i estudi
@@ -425,17 +438,20 @@ article {
       height: 100%;
       z-index: 0;
     }
+
     .intro {
       padding-bottom: 540px;
     }
   }
+
   &.cooperativa {
-    section.intro{
+    section.intro {
       background: url(../image/bg_cooperativa.png) no-repeat left bottom $gris;
       background-size: contain;
 
     }
-    section.quisom{
+
+    section.quisom {
       background: url(../image/persones.jpg) no-repeat right bottom $gris;
       background-size: contain;
 
@@ -443,14 +459,15 @@ article {
   }
 
   section.intro {
-    > div {
+    >div {
       @include grid-col;
       padding-bottom: 250px;
+
       span {
         grid-column: 4 / 6;
         @include seccio;
       }
-  
+
       h2 {
         grid-column: 2 / 11;
       }
@@ -462,23 +479,28 @@ article {
     }
 
   }
+
   section.quisom {
-    margin-bottom:240px;
-    > div {
+    margin-bottom: 240px;
+
+    >div {
       @include grid-col;
       padding-bottom: 250px;
-  
+
       h2 {
         grid-column: 3 / 7;
         font-size: 126px;
       }
+
       div {
         &.quim {
           grid-column: 2 / 7;
         }
+
         &.miquel {
           grid-column: 8 / 13;
         }
+
         h4 {
           font-style: normal;
           font-weight: normal;
@@ -487,13 +509,14 @@ article {
           color: #454545;
           margin: 1em -80px;
         }
+
         h3 {
           font-style: normal;
           font-weight: bold;
           font-size: 36px;
           line-height: 100%;
           /* or 36px */
-  
+
           letter-spacing: -0.01em;
           max-width: 200px;
           color: #454545;
@@ -502,11 +525,13 @@ article {
     }
 
   }
+
   section.serveis {
     position: relative;
     display: grid;
-    max-width: 1024px;
+    max-width: 1084px;
     margin: 0 auto;
+    padding: 0 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 30px;
@@ -535,12 +560,15 @@ article {
 
       hyphens: auto;
     }
+
     .branding {
       grid-area: brand;
     }
+
     .product {
       grid-area: producte;
     }
+
     .digital {
       grid-area: digital;
     }
@@ -561,6 +589,7 @@ article {
 
       color: #353535;
     }
+
     img {
       float: left;
     }
@@ -582,22 +611,27 @@ footer {
     }
   }
 
-  &.negre{
-    figure {visibility: hidden;}
+  &.negre {
+    figure {
+      visibility: hidden;
+    }
 
   }
+
   figure {
     width: 100%;
     margin: 0;
     height: 416px;
     position: relative;
+
     img {
       position: absolute;
       bottom: 0;
       width: 100%;
     }
   }
-  > main {
+
+  >main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 30px;
@@ -608,7 +642,7 @@ footer {
     span {
       grid-column: 5 / 12;
       @include seccio;
-      color:white;
+      color: white;
     }
 
     h2 {
@@ -625,20 +659,21 @@ footer {
       }
     }
 
-    > div {
+    >div {
       grid-column: 5 / 12;
       columns: 1;
 
       p {
         font-size: 19px;
       }
+
       div.contacta {
         background: url("../image/svg/telefon.svg") no-repeat left center;
         height: auto;
         overflow: hidden;
-        margin-top:15px;
+        margin-top: 15px;
 
-        
+
         ul {
           margin: 0;
           padding: 0;
@@ -648,6 +683,7 @@ footer {
           align-items: flex-start;
           float: left;
           padding-left: 50px;
+
           li {
             list-style: none;
             flex-basis: 35%;
@@ -655,30 +691,29 @@ footer {
             padding-left: 25px;
             background: url("../image/svg/arrow.svg") no-repeat left center;
 
-            a{
-              color:white;
-              font-weight:600;
-            
+            a {
+              color: white;
+              font-weight: 600;
+
             }
           }
         }
-        //background-image: url();
       }
     }
   }
 
-  .copyright{
-    text-align:center;
+  .copyright {
+    text-align: center;
     font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 125%;
-/* identical to box height, or 22px */
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 125%;
+    /* identical to box height, or 22px */
 
-text-align: center;
+    text-align: center;
 
-color: #FFFFFF;
-padding-top:225px;
-padding-bottom: 70px;
+    color: #FFFFFF;
+    padding-top: 225px;
+    padding-bottom: 70px;
   }
 }

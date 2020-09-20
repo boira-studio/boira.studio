@@ -79,7 +79,7 @@ export default {
     {
 
         id: "nova-web-5w",
-        url: "projectes/nova-web-5w",
+        url: "projecte/nova-web-5w",
         portada: "true",
         nombre: "Nova web 5W", 
         client: "Revista 5W",
@@ -95,7 +95,7 @@ export default {
 {
 
         id: "kamaleonik",
-        url: "projectes/kamaleonik",
+        url: "/projecte/kamaleonik",
         portada: "true",
         nombre: "Redisseny Kamaleonik", 
         client: "Kamaleonik",
@@ -112,7 +112,7 @@ export default {
 {
 
         id: "tierra-sin-ellas",
-        url: "projectes/tierra-sin-ellas",
+        url: "projecte/tierra-sin-ellas",
         portada: "true",
         nombre: "Tierra Sin Ellas", 
         client: "Revista 5W",
@@ -128,7 +128,7 @@ export default {
 {
 
         id: "cidob-elecciones",
-        url: "projectes/cidob-elecciones",
+        url: "projecte/cidob-elecciones",
         portada: "true",
         nombre: "Elecciones Europeas 2019", 
         client: "CIDOB",
@@ -144,7 +144,7 @@ export default {
 {
 
         id: "danidevito",
-        url: "projectes/danidevito",
+        url: "projecte/danidevito",
         portada: "false",
         nombre: "Identitat i web Danidevito", 
         client: "Danidevito Studio",
@@ -160,7 +160,7 @@ export default {
 {
 
         id: "jover",
-        url: "projectes/jover",
+        url: "projecte/jover",
         portada: "false",
         nombre: "Identitat i web Jover-Santinyà", 
         client: "Jover-Santinyà Grup Consultor",
@@ -176,7 +176,7 @@ export default {
 {
 
         id: "se-queda-en-casa",
-        url: "projectes/se-queda-en-casa",
+        url: "projecte/se-queda-en-casa",
         portada: "false",
         nombre: "5W Se Queda En Casa", 
         client: "5W",
@@ -192,7 +192,7 @@ export default {
 {
 
         id: "beh",
-        url: "projectes/beh",
+        url: "projecte/beh",
         portada: "false",
         nombre: "Barcelona Eating Home", 
         client: "BEH",

@@ -3,7 +3,7 @@
     <Header />
     <nuxt />
     <Footer parametre="negre" />
-      <cursor-fx color="gray" colorHover="green" />
+      <cursor-fx  color="gray" colorHover="black" force-custom-slot outside-size=30 inside-size="80"	/>
 
   </div>
 </template>
