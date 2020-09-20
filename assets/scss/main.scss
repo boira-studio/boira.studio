@@ -32,9 +32,19 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
 
+  @media #{$mobile} {
+    //flex-wrap: nowrap;
+
+  }
+
   >div {
     flex-basis: 33.3%;
     display: flex;
+    @media #{$mobile} {
+      flex-basis: 32%;
+  
+    }
+
 
     &.slogan {
       display: flex;
@@ -50,9 +60,12 @@ header {
         font-size: 21px;
         line-height: 120%;
         /* or 25px */
-
-
         color: #454545;
+        @media #{$mobile} {
+          padding: 15px;
+          font-size: 13px;
+      
+        }
       }
     }
 
@@ -62,11 +75,20 @@ header {
       justify-content: flex-end;
       z-index: 99;
 
+
       >div {
         padding: 52px;
         position: fixed;
         top: 0;
         z-index: 10;
+
+        @media #{$mobile} {
+          padding: 24px;
+          font-size:17px;
+          position: fixed;
+          top: 0;
+          z-index: 10;
+        }
 
         img.bar {
           display: block;
@@ -124,6 +146,9 @@ header {
               letter-spacing: -0.02em;
               color: white;
               text-decoration: none;
+              @media #{$mobile} {
+                font-size:50px;
+              }
 
               &:hover {
                 -webkit-text-stroke: 1px white;
@@ -197,22 +222,29 @@ section#intro {
   padding-bottom: 160px;
 
   >div {
-    height: 900px;
+    height: calc(100vh - 100px);
     max-width: 1440px;
     width: 100%;
     position: relative;
+
+    @media #{$mobile} {
+      height: calc(100vh - 60px);
+    }
+    
 
     &::before {
       background: url(../image/bg_superior_1440.png) no-repeat;
       max-width: 100%;
       height: 900px;
       bottom: -170px;
-
       content: " ";
       position: absolute;
       z-index: -1;
       width: 1440px;
       background-position: center;
+      @media #{$mobile} {
+        bottom: -110px;
+      }
     }
 
     &::after {
@@ -225,6 +257,9 @@ section#intro {
       z-index: -3;
       width: 1440px;
       background-position: center;
+      @media #{$mobile} {
+        bottom: -110px;
+      }
     }
 
     .logo {
@@ -290,6 +325,10 @@ section.estudi {
     >div {
       grid-column: 5 / 12;
       columns: 2;
+      @media #{$mobile} {
+        columns:1;
+
+      }
 
       p {
         font-size: 19px;
@@ -353,6 +392,7 @@ section.work {
       @media #{$mobile} {
         margin-bottom: 0em;
         margin-top:3em;
+        font-size: 50px;
 
       }
 
@@ -414,6 +454,12 @@ section.work {
 section.cooperativa {
   background: #fff;
   padding-bottom: 270px;
+
+  @media #{$mobile} {
+    padding-top: 135px;
+    padding-bottom: 0;
+  }
+
 
   main {
     @include grid-col;
@@ -498,6 +544,10 @@ article {
       div {
         grid-column: 4 / 12;
         columns: 2;
+        @media #{$mobile} {
+          columns:1;
+  
+        }
       }
     }
 
@@ -713,6 +763,12 @@ footer {
           li {
             list-style: none;
             flex-basis: 35%;
+
+            @media #{$mobile} {
+              flex-basis: 100%;
+            }
+
+
             line-height: 2em;
             padding-left: 25px;
             background: url("../image/svg/arrow.svg") no-repeat left center;
