@@ -243,6 +243,10 @@ section#intro {
         width: 565px;
         height: 312px;
 
+        @media #{$mobile} {
+          width: 250px;
+        }
+
         path {
           fill: white;
         }
@@ -298,6 +302,9 @@ section.work {
   position: relative;
 
   background: linear-gradient(0, #fff 0px, #fff 420px, #222222 421px);
+  @media #{$mobile} {
+    background:#222222;
+  }
 
   //background:#222222;
   color: #fff;
@@ -343,6 +350,12 @@ section.work {
       font-size: 70px;
       line-height: 90%;
       margin-bottom: 70px;
+      @media #{$mobile} {
+        margin-bottom: 0em;
+        margin-top:3em;
+
+      }
+
 
     }
 
@@ -356,6 +369,14 @@ section.work {
       width: 70px;
       align-items: center;
       height: 70%;
+
+      @media #{$mobile} {
+        height: 100%;
+        writing-mode: inherit;
+        transform: none;
+        width: 100%;
+
+      }
 
 
 
@@ -381,6 +402,12 @@ section.work {
     color: white;
     border: transparent;
     padding-bottom: 330px;
+
+    @media #{$mobile} {
+      margin-top:1em;
+      padding-bottom:1em;
+    }
+    
   }
 }
 
