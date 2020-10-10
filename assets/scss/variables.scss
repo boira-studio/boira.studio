@@ -6,6 +6,7 @@ $tablet: "only screen and (min-width: 768px) and (max-width: 1024px)";
 }
 
 
+
 /* VARIABLE */
 $base-color: #c6538c;
 $gris: #DEDEDE;
@@ -56,6 +57,10 @@ $contingut: 1170px;
   text-transform: uppercase;
   margin-bottom: 1em;
   color: #454545;
+  background: url(../image/svg/arrow-negre.svg) no-repeat;
+  padding-left:30px;
+  background-position: 0 3px;
+
 }
 
 

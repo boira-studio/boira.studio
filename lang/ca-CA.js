@@ -23,7 +23,7 @@ export default {
     paragraf3: "Fa més de 10 anys que vam coincidir a l'equip producció web de l'Ajuntament BCN.cat, en Miquel com a dissenyador i en Quim com a desenvolupador. Desde aleshores hem col·laborat de diverses maneres en diferents projectes: desde projectes de webs coorporatives com Médicos Sin Fronteras, o ecoomerce 5W, com sites de campanya o comunicació pel CIDOB, Tierra Sin Ellas o petites i mitjanes empreses com Jover Santinyà, Danidevito o presentacions online durant el confinament del COVID-19.",
     quisom: "QUI SOM",
     quim: "—  Director Tecnològic",
-    detallQuim: "Estudia telecomunicacions a la UPC. Comença a treballar al Departament d’Internet de l’Ajuntament de Barcelona (BCN.cat) i després gestiona els seus propis clients com a freelance al mateix temps que treballa a diferents estudis i agències de Barcelona (Artiq, iEstrategic, Motto i eMascaró).",
+    detallQuim: "Graduat en telecomunicacions a la UPC i amb un master d'aplicacions multimedia per la UOC. Ha treballat a Médicos Sin Fronteras, l'Ajuntament de Bacelona i és CoFundador de Revista 5W. ",
     miquel: "—  Director d’Art",
     detallMiquel: "Estudia disseny gràfic i multimèdia a Idep. Comença a treballar al Departament d’Internet de l’Ajuntament de Barcelona (BCN.cat) i després gestiona els seus propis clients com a freelance al mateix temps que treballa a diferents estudis i agències de Barcelona (Artiq, iEstrategic, Motto i eMascaró)."
   },
@@ -61,6 +61,8 @@ export default {
       },
   
     ],
+      clients: "Clients",
+      parragraf_clients:"Treballem amb organitzacions de totes les mides, des de start-up desemmotllades fins a marques líders del sector privat, públic i social. Aquí els més destacats:",
   },
   footer:{
     Titolcontacta: "Contacta",

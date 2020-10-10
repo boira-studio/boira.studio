@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 
   @media #{$mobile} {
-  //background-color: red;
+    //background-color: red;
   }
 
 
@@ -40,6 +40,7 @@ header {
   >div {
     flex-basis: 33.3%;
     display: flex;
+
     @media #{$mobile} {
       flex-basis: 32%;
 
@@ -60,11 +61,12 @@ header {
         font-size: 21px;
         line-height: 120%;
         /* or 25px */
-        color: #454545;
+        //color: #454545;
+
         @media #{$mobile} {
           padding: 15px;
           font-size: 13px;
-      
+
         }
       }
     }
@@ -84,7 +86,7 @@ header {
 
         @media #{$mobile} {
           padding: 24px;
-          font-size:17px;
+          font-size: 17px;
           position: fixed;
           top: 0;
           z-index: 10;
@@ -146,8 +148,9 @@ header {
               letter-spacing: -0.02em;
               color: white;
               text-decoration: none;
+
               @media #{$mobile} {
-                font-size:50px;
+                font-size: 50px;
               }
 
               &:hover {
@@ -178,7 +181,7 @@ header {
         /* identical to box height, or 22px */
         text-align: center;
         text-decoration-line: underline;
-        color: #454545;
+        //color: #454545;
 
 
       }
@@ -230,7 +233,7 @@ section#intro {
     @media #{$mobile} {
       height: calc(100vh - 60px);
     }
-    
+
 
     &::before {
       background: url(../image/bg_superior_1440.png) no-repeat;
@@ -242,6 +245,7 @@ section#intro {
       z-index: -1;
       width: 1440px;
       background-position: center;
+
       @media #{$mobile} {
         bottom: -110px;
       }
@@ -257,6 +261,7 @@ section#intro {
       z-index: -3;
       width: 1440px;
       background-position: center;
+
       @media #{$mobile} {
         bottom: -110px;
       }
@@ -303,12 +308,14 @@ section.estudi {
     @include grid-col;
     margin: 0 auto;
     position: relative;
-    
+
+
 
     a {
       grid-column: 5 / 12;
       padding-bottom: 1em;
       @include seccio_link;
+
 
     }
 
@@ -325,8 +332,9 @@ section.estudi {
     >div {
       grid-column: 5 / 12;
       columns: 2;
+
       @media #{$mobile} {
-        columns:1;
+        columns: 1;
 
       }
 
@@ -341,8 +349,9 @@ section.work {
   position: relative;
 
   background: linear-gradient(0, #fff 0px, #fff 420px, #222222 421px);
+
   @media #{$mobile} {
-    background:#222222;
+    background: #222222;
   }
 
   //background:#222222;
@@ -389,9 +398,10 @@ section.work {
       font-size: 70px;
       line-height: 90%;
       margin-bottom: 70px;
+
       @media #{$mobile} {
         margin-bottom: 0em;
-        margin-top:3em;
+        margin-top: 3em;
         font-size: 50px;
 
       }
@@ -435,6 +445,7 @@ section.work {
       width: 100%;
     }
   }
+
   footer {
     @include grid-col;
     margin-top: -241px;
@@ -443,11 +454,23 @@ section.work {
     border: transparent;
     padding-bottom: 330px;
 
+
     @media #{$mobile} {
-      margin-top:1em;
-      padding-bottom:1em;
+      margin-top: 1em;
+      padding-bottom: 1em;
     }
-    
+
+    a {
+      font-size: 18px;
+      line-height: 115%;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: -0.01em;
+      text-decoration-line: underline;
+      color: #454545;
+      max-width: 53px;
+    }
+
   }
 }
 
@@ -477,7 +500,7 @@ section.cooperativa {
       /* or 80px */
 
       text-align: center;
-      
+
 
       grid-row: 2;
     }
@@ -502,14 +525,14 @@ article {
       background: url(../image/muntanya.png) no-repeat center bottom;
       content: "";
       position: absolute;
-      top: 31vh;
+      top: 40vh;
       width: 100%;
       height: 100%;
       z-index: 0;
     }
 
     .intro {
-      padding-bottom: 540px;
+      padding-bottom: 240px;
     }
   }
 
@@ -544,9 +567,10 @@ article {
       div {
         grid-column: 4 / 12;
         columns: 2;
+
         @media #{$mobile} {
-          columns:1;
-  
+          columns: 1;
+
         }
       }
     }
@@ -554,6 +578,8 @@ article {
   }
 
   section.quisom {
+    position: relative;
+
     margin-bottom: 240px;
 
     >div {
@@ -602,9 +628,9 @@ article {
   section.serveis {
     position: relative;
     display: grid;
-    max-width: 1084px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 30px;
@@ -612,7 +638,6 @@ article {
       "titol brand"
       "producte ."
       ". digital";
-    margin-bottom: 540px;
     background: url(../image/svg/elipse.svg) no-repeat center center;
 
     h1 {
@@ -650,6 +675,8 @@ article {
       font-weight: bold;
       font-size: 36px;
       line-height: 100%;
+      max-width: 200px;
+      margin-bottom: .5em;
     }
 
     p {
@@ -665,18 +692,91 @@ article {
     img {
       float: left;
     }
+
+    ul {
+      margin-left: 6em;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  section.clients {
+    margin-bottom: 200px;
+    padding-top: 540px;
+    position: relative;
+
+    &::before {
+      background: url(../image/bg_illa.png) no-repeat center top;
+      height: 900px;
+      height: 900px;
+      content: " ";
+      position: absolute;
+      top: -2em;
+      width: 100%;
+
+      @media #{$mobile} {}
+    }
+
+    main {
+      @include grid-col;
+
+      h1 {
+        font-family: "Amiri";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 126px;
+        line-height: 80%;
+        /* or 101px */
+
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #454545;
+        grid-column: 3 / 7;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+
+      }
+
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 150%;
+        /* or 28px */
+        display: flex;
+        align-items: flex-end;
+        color: #454545;
+        grid-column: 8 / 12;
+
+      }
+
+      div.logos {
+        grid-column: 1 / 12;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 85px;
+        margin-bottom: 200px;
+
+
+      }
+    }
+
   }
 }
 
 
 
-
+//component footer
 footer {
   position: relative;
   z-index: 1;
   color: #fff;
   background: linear-gradient(180deg, transparent 414px, #222222 414px);
-
 
 
   &.blanc {
@@ -726,7 +826,7 @@ footer {
     }
 
     h2 {
-      grid-column: 2 / 12;
+      grid-column: 2 / 11;
 
 
       i {
@@ -736,7 +836,7 @@ footer {
     }
 
     >div {
-      grid-column: 5 / 12;
+      grid-column: 5 / 11;
       columns: 1;
 
       p {
